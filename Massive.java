@@ -8,7 +8,7 @@ public class Massive {
 		method4();
 	}
 
-	// Задание 1.1
+	// Task 1.1
 	public static void method1()
 	{
 		int mas[] = {1,3,5};
@@ -17,11 +17,11 @@ public class Massive {
 		{
 			mas[i]++;
 		}  } catch (ArrayIndexOutOfBoundsException ob1)
-		   {System.out.println("Метод 1: ошибка - выход за пределы массива.");};
+		   {System.out.println("Method 1: error - array index is out of bounds.");};
 	
 		}
 	
-	// Задание 1.2
+	// Task 1.2
 	public static void method2()
 	{
 		int mas[] = {1,3,5};
@@ -31,13 +31,13 @@ public class Massive {
 			mas[i]++;
 			if (i == mas.length-1) {mas[i] = mas[i] / 0;}
 		}  } catch (ArrayIndexOutOfBoundsException ob1)
-		   {System.out.println("Метод 1: ошибка - выход за пределы массива.");}
+		   {System.out.println("Method 2: error - array index is out of bounds.");}
 		     catch (ArithmeticException ob1)
-		   {System.out.println("Метод 1: ошибка - деление на ноль.");}
+		   {System.out.println("Method 2: error - division by zero.");}
 	
 		}
 	
-	///Задание 1.3
+	// Task 1.3
 	public static void method3()
 	{
 		int mas[] = {1,3,5};
@@ -47,14 +47,14 @@ public class Massive {
 			mas[i]++;
 		    if (i == mas.length-1) {mas[i] = mas[i] / 0;}
 		}  } catch (ArrayIndexOutOfBoundsException | ArithmeticException ob1)
-		   {System.out.print("Метод 3: ошибка - ");
+		   {System.out.print("Method 3: error - ");
 		    String s = ob1.getMessage();
-		    if (s.equals("/ by zero")) {System.out.println("деление на ноль.");}
-		    else {System.out.println("выход за пределы массива.");}
+		    if (s.equals("/ by zero")) {System.out.println("division by zero.");}
+		    else {System.out.println("array index is out of bounds.");}
 		   } 
 	} 
 
-	//Задание 1.4
+	//Task 1.4
 	public static void method4()
 	{
 		int mas[] = {1,3,5};
@@ -63,8 +63,7 @@ public class Massive {
 		{
 			mas[i]++;
 		}  } catch (ArrayIndexOutOfBoundsException ob1)
-		   {System.out.println("Метод 4: ошибка - выход за пределы массива.");}
+		   {System.out.println("Method 4: error - array index is out of bounds.");}
 	         finally{System.out.println("Hello!");};
 		}
-	
 }
